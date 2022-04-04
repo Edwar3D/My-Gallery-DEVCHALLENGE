@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+body{
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    width: 80%;
+    padding: 60px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.perfil{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.perfil .img-perfil{
+    width: 9.75rem;
+    height: 9.75rem;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+}
+.perfil .name{
+    font-size: 1.5rem;
+    color: #4E5150;
+    margin-bottom: 8px;
+}
+.perfil .ubication{
+    font-size: 0.875rem;
+    color: #A9A9A9;
+}
+.perfil .banner{
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+.perfil .banner .group{
+    background: #E5E5E5;
+    padding: 14px;
+    border-radius: 12px;
+    min-width: 6.25rem;
+}
+.group .value{
+    font-size: 1.125rem;
+    color: #4E5150;
+    margin-bottom: 4px;
+}
+.group .title{
+    color: #BDBDBD;
+    font-size: 0.875rem;
+}
+
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    grid-template-areas: 
+    "one    two     two"
+    "three  three   four"
+    "five   six     four";
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.item-one{
+    grid-area: one;
+}
+.item-two{
+    grid-area: two;
+}
+.item-three{
+    grid-area: three;
+}
+.item-four{
+    grid-area: four;
+}
+.item-five{
+    grid-area: five;
+}
+.item-six{
+    grid-area: six;
+}
+footer{
+    padding-bottom: 1.25rem;
+}
+@media (max-width:780px) {
+    .gallery{
+        gap: 15px;
+    }    
+}
+@media (max-width:480px) {
+    html{
+        font-size: 12px;
+    }   
+    main{
+        width: 100%;
+        padding: 30px 12px;
+    }
+    .gallery{
+        gap: 5px;
+    }
+}
